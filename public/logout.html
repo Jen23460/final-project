@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - My Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black flex flex-col min-h-screen">
+   
+
+    <main class="flex-grow flex items-center justify-center">
+        <section class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm text-center">
+            <h1 class="text-2xl font-bold mb-6">Logging Out</h1>
+            <p class="mb-4">You have been logged out successfully.</p>
+            <p>Redirecting to the homepage...</p>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-4 text-center">
+        <p>&copy; 2024 My Blog</p>
+    </footer>
+
+    <script>
+         function logout() {
+        localStorage.removeItem('token'); // Remove the token from local storage
+        alert('Logged out successfully!');
+        loadPosts(); // Refresh posts to remove edit/delete buttons
+    }
+        // Redirect to the homepage after a short delay
+        setTimeout(() => {
+            window.location.href = '/index.html';
+        }, 2000); // Redirect after 2 seconds
+    </script>
+</body>
+</html>

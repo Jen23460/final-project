@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="home.html" class="flex items-center">
+                        <span class="ml-3 text-2xl font-bold text-gray-900">JENA BLOG</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 ml-auto mr-10">
+                    <a href="home.html" class="text-gray-900 hover:text-gray-900 transition duration-300">Home</a>
+                    <a href="logout.html" class="text-gray-900 hover:text-gray-900 transition duration-300">Logout</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+   <section class=" relative h-screen " style="background-image: url('/bg.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 "></div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-black">
+            <h1 class="text-4xl md:text-6xl font-bold transition-transform transform hover:scale-105 hover:opacity-90 duration-300 ease-in-out"></h1>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <form id="post-form" class="bg-gray-100 p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-xl font-semibold text-gray-500 mb-4">Create a Post</h3>
+                <div class="mb-4">
+                    <label for="title" class="block text-gray-500">Title:</label>
+                    <input type="text" id="title" name="title" required class="w-full p-2 rounded-md bg-gray-200 text-black border border-gray-200 focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="content" class="block text-gray-500">Content:</label>
+                    <textarea id="content" name="content" required class="w-full p-2 rounded-md bg-gray-200 text-black border border-gray-200 focus:outline-none focus:border-blue-500" rows="4"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md">Create Post</button>
+                <p id="post-message" class="text-green-500 mt-2"></p>
+            </form>
+
+            <div id="post-section" class="mt-8">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-white text-white py-10 flex justify-center">
+        <div class="mt-10 text-center text-gray-900">
+            <p>&copy; 2024 JENA BLOG. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
